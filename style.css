@@ -1,0 +1,85 @@
+.main {
+    font-family: 'Crimson Text', serif;
+}
+.background-wrap {
+    background-size: 100% 100%;
+    width: 100%;
+    position: fixed;
+    top: -140vh;
+}
+.first-page {
+    cursor: url(img/Cursor.png) 32 32,default;
+    background-image: url(img/svetlana-bailey-demo.png);
+    background-repeat: no-repeat;
+}
+.contacts-page-wrap {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.5em;
+    top: -50vh;
+}
+.contacts-page-wrap a {
+    color: #ffffff;
+}
+.clampart {
+    position: absolute;
+    top: 4vh;
+    left: 30%;
+}
+.iscp {
+    position: absolute;
+    top: 19vh;
+    right: 30%
+}
+.svetlana-bailey {
+    position: absolute;
+    top: 49vh;
+    left: 20%
+}
+.mail {
+    position: absolute;
+    top: 65vh;
+    right: 5%;
+}
+.portfolio {
+    position: absolute;
+    top: 90vh;
+    left: 40%;
+}
+.resume {
+    position: absolute;
+    top: 100vh;
+    right: 40%;    
+}
+.gallery-block {
+    position: absolute;
+    top: 110vh;
+    left: 3%;
+}
+.gallery-block p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.adress {
+    position: absolute;
+    top: 145vh;
+    right: 20%;
+}
+.adress p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.blue-sky {
+    position: absolute;
+    top: 179vh;
+    left: 20%;
+}
+.rights-reserved {
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+}
+.rights-reserved span {
+    margin-left: 50px;
+}
