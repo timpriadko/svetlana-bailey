@@ -88,6 +88,18 @@ body {
 }
 
 /************************* Responsive *************************/
+@media (max-width: 1280px) {    
+    .first-page {
+        top: -100vh;
+    }
+}
+
+@media (max-width: 768px) {    
+    .first-page {
+        top: -10vh;
+    }
+}
+
 @media (max-width: 360px) {    
     .first-page {
         top: 0;
@@ -119,17 +131,5 @@ body {
     }
     .blue-sky {
         left: 10%;
-    }
-}
-
-@media (max-width: 768px) {    
-    .first-page {
-        top: -10vh;
-    }
-}
-
-@media (max-width: 1280px) {    
-    .first-page {
-        top: -100vh;
     }
 }
