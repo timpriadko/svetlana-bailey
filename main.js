@@ -2,18 +2,13 @@ window.onload = function() {
     var pageHeight = document.documentElement.clientWidth * 1.49 + 'px';
     document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = pageHeight : '';
 
-    if (window.screen.width >= 1920) {
+    if (window.screen.width >= 360) {
         // svetlana page
-        document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.5 + 'px' : '';
+        document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.75 + 'px' : '';
         // cv page
-        document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.1 + 'px' : '';
+        document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 4.1 + 'px' : '';
     }
-    if (window.screen.width >= 1366) {
-        document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.3 + 'px' : '';
-    }
-    if (window.screen.width >= 1280) {
-        // svetlana page
-        document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.6 + 'px' : '';
+    if (window.screen.width >= 640) {
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.7 + 'px' : '';
     }
@@ -23,14 +18,28 @@ window.onload = function() {
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 2.7 + 'px' : '';
     }
-    if (window.screen.width >= 360) {
-        // svetlana page
-        document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.75 + 'px' : '';
+    if (window.screen.width >= 1024) {
         // cv page
-        document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 4.1 + 'px' : '';
+        document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.7 + 'px' : '';
+    }
+    if (window.screen.width >= 1280) {
+        // svetlana page
+        document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.6 + 'px' : '';
+        // cv page
+        document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.5 + 'px' : '';
+    }
+    if (window.screen.width >= 1366) {
+        document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.3 + 'px' : '';
+    }
+    if (window.screen.width >= 1920) {
+        // svetlana page
+        document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.5 + 'px' : '';
+        // cv page
+        document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.1 + 'px' : '';
     }
 
-    window.addEventListener('mousemove', scrollHandler);
+    window.addEventListener('mousemove', scrollHandler, false);
+    window.addEventListener('mouseout', stopScrollHandler, false);
 
     //UI
     var svetlanaBackground = document.querySelector('.background-wrap');
@@ -39,18 +48,18 @@ window.onload = function() {
 
     
     var scrollTopArea, scrollBottomArea;
-        var interval = 1000 / 35;
-        var plusSize = 0;
-        var m_top = 0;
+    var interval = 1000 / 35;
+    var plusSize = 0;
+    var m_top = 0;
 
     
     setInterval(function() {
         if (scrollTopArea) {
             if (svetlanaBackground.getBoundingClientRect().y <= 0) {
-                    plusSize += 0.2;
+                plusSize += 0.2;
             } else {
                 plusSize = 0;
-            }            
+            }
         }
         
         if (scrollBottomArea) {
@@ -59,8 +68,6 @@ window.onload = function() {
             } else {
                 plusSize = 0;
             }
-            
-            
         }
 
         m_top = m_top + plusSize;
@@ -75,6 +82,16 @@ window.onload = function() {
         
         if (!scrollTopArea && !scrollBottomArea) {
             plusSize = 0;
-        } 
+        }
+    }
+    
+    // Stop scroll handler
+    function stopScrollHandler(e) {
+        console.log(e.pageY)
+        if (e.pageY < 0 && !scrollTopArea) {
+            plusSize = 0;
+            console.log('+')
+        }
+        
     }
 }

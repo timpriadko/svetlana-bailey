@@ -100,6 +100,12 @@ body {
     }
 }
 
+@media (max-width: 640px) {    
+    .first-page {
+        top: -155vh;
+    }
+}
+
 @media (max-width: 360px) {    
     .first-page {
         top: 0;
