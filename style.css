@@ -1,3 +1,6 @@
+body {
+    margin: 0;
+}
 .main {
     font-family: 'Crimson Text', serif;
 }
@@ -9,7 +12,7 @@
 }
 .first-page {
     cursor: url(img/Cursor.png) 32 32,default;
-    background-image: url(img/svetlana-bailey-demo.png);
+    background-image: url(img/svetlana-bailey.jpg);
     background-repeat: no-repeat;
 }
 .contacts-page-wrap {
@@ -82,4 +85,51 @@
 }
 .rights-reserved span {
     margin-left: 50px;
+}
+
+/************************* Responsive *************************/
+@media (max-width: 360px) {    
+    .first-page {
+        top: 0;
+    }
+    .clampart {
+        position: absolute;
+        top: 2vh;
+        left: 10%;
+    }
+    .iscp {
+        right: 22%
+    }
+    .svetlana-bailey {
+        left: 8%
+    }
+    .rights-reserved span {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .portfolio {
+        left: 30%;
+    }
+    .resume {
+        right: 30%;    
+    }
+    .adress {
+        right: 5%;
+    }
+    .blue-sky {
+        left: 10%;
+    }
+}
+
+@media (max-width: 768px) {    
+    .first-page {
+        top: -10vh;
+    }
+}
+
+@media (max-width: 1280px) {    
+    .first-page {
+        top: -100vh;
+    }
 }
