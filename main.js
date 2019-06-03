@@ -88,6 +88,7 @@ window.onload = function() {
         
         if (!scrollTopArea && !scrollBottomArea) {
             plusSize = 0;
+            allowScroll = true;
         }
         if (scrollTopArea) {
             allowScroll = true;
@@ -107,6 +108,14 @@ window.onload = function() {
         if (e.pageY > document.documentElement.clientHeight) {
             allowScroll = false;
             plusSize = 0;
-        }        
+        }
+        if (e.pageX < 0) {
+            allowScroll = false;
+            plusSize = 0;
+        }
+        if (e.pageX > document.querySelector('.background-wrap').offsetWidth) {
+            allowScroll = false;
+            plusSize = 0;
+        }
     }
 }
