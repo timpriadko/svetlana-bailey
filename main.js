@@ -67,8 +67,10 @@ window.onload = function() {
         }
         
         if (scrollBottomArea) {
-            if (svetlanaBackground.getBoundingClientRect().y >= -(document.querySelector('.background-wrap').style.height.slice(0, -2) -document.documentElement.clientHeight - 15)) {
-                plusSize -= 0.2;
+            if (svetlanaBackground.getBoundingClientRect().y >= -(document.querySelector('.background-wrap').offsetHeight - document.documentElement.clientHeight - 15)) {                
+                if (allowScroll === true) {
+                    plusSize -= 0.2;
+                }                
             } else {
                 plusSize = 0;
             }
@@ -87,17 +89,24 @@ window.onload = function() {
         if (!scrollTopArea && !scrollBottomArea) {
             plusSize = 0;
         }
+        if (scrollTopArea) {
+            allowScroll = true;
+        }
+        if (scrollBottomArea) {
+            allowScroll = true;
+        }
     }
     
     // Stop scroll handler
     function stopScrollHandler(e) {
-        scrollTopArea = e.pageY < scrollAreaHeight;
-        scrollBottomArea = e.pageY > document.documentElement.clientHeight - scrollAreaHeight;
         console.log(e.pageY)
         if (e.pageY < 0) {
-            allowScroll = true;
-            console.log('+')
+            allowScroll = false;
+            plusSize = 0;
         }
-        
+        if (e.pageY > document.documentElement.clientHeight) {
+            allowScroll = false;
+            plusSize = 0;
+        }        
     }
 }
