@@ -90,7 +90,23 @@ body {
 }
 
 /************************* Responsive *************************/
-@media screen and (min-device-width: 1366px) {
+@media screen and (min-device-width: 1920px) {
+    .first-page {
+        top: -142vh;
+        left: 0;
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-device-width: 1600px) {
+    .first-page {
+        top: -156vh;
+        left: -14vh;
+        transform: scale(0.9);
+    }
+}
+
+@media screen and (max-device-width: 1366px) {
     .first-page {
         top: -183vh;
         left: -32vh;
