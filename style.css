@@ -14,6 +14,8 @@ body {
     cursor: url(img/Cursor.png) 32 32,default;
     background-image: url(img/svetlana-bailey.jpg);
     background-repeat: no-repeat;
+    width: 1920px;
+    height: 2879px;
 }
 .contacts-page-wrap {
     background-color: #000000;
@@ -88,27 +90,50 @@ body {
 }
 
 /************************* Responsive *************************/
+@media screen and (min-device-width: 1366px) {
+    .first-page {
+        top: -183vh;
+        left: -32vh;
+        transform: scale(0.75);
+    }
+}
 @media (max-width: 1280px) {    
     .first-page {
-        top: -100vh;
+        top: -136vh;
+        left: -16vh;
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 1024px) {
+    .first-page {
+        top: -183vh;
+        left: -42vh;
+        transform: scale(0.7);
     }
 }
 
 @media (max-width: 768px) {    
     .first-page {
-        top: -10vh;
+        top: -136vh;
+        left: -46vh;
+        transform: scale(0.7);
     }
 }
 
-@media (max-width: 640px) {    
+@media (max-width: 640px) {
     .first-page {
-        top: -155vh;
+        top: -394vh;
+        left: -162vh;
+        transform: scale(0.4);
     }
 }
 
-@media (max-width: 360px) {    
+@media (max-width: 360px) {
     .first-page {
-        top: 0;
+        top: -196vh;
+        left: -112vh;
+        transform: scale(0.4);
     }
     .clampart {
         position: absolute;

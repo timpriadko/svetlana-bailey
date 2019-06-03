@@ -1,10 +1,10 @@
 window.onload = function() {
     var pageHeight = document.documentElement.clientWidth * 1.49 + 'px';
-    document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = pageHeight : '';
+    // document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = pageHeight : '';
 
     if (window.screen.width >= 360) {
-        // svetlana page
-        document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.75 + 'px' : '';
+        // // svetlana page
+        // document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.75 + 'px' : '';
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 4.1 + 'px' : '';
     }
@@ -13,8 +13,8 @@ window.onload = function() {
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.7 + 'px' : '';
     }
     if (window.screen.width >= 768) {
-        // svetlana page
-        document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.6 + 'px' : '';
+        // // svetlana page
+        // document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.6 + 'px' : '';
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 2.7 + 'px' : '';
     }
@@ -23,8 +23,8 @@ window.onload = function() {
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.7 + 'px' : '';
     }
     if (window.screen.width >= 1280) {
-        // svetlana page
-        document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.6 + 'px' : '';
+        // // svetlana page
+        // document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.6 + 'px' : '';
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.5 + 'px' : '';
     }
@@ -32,8 +32,8 @@ window.onload = function() {
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.3 + 'px' : '';
     }
     if (window.screen.width >= 1920) {
-        // svetlana page
-        document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.5 + 'px' : '';
+        // // svetlana page
+        // document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.5 + 'px' : '';
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.1 + 'px' : '';
     }
@@ -48,6 +48,7 @@ window.onload = function() {
 
     
     var scrollTopArea, scrollBottomArea;
+    var allowScroll = true;
     var interval = 1000 / 35;
     var plusSize = 0;
     var m_top = 0;
@@ -55,15 +56,18 @@ window.onload = function() {
     
     setInterval(function() {
         if (scrollTopArea) {
-            if (svetlanaBackground.getBoundingClientRect().y <= 0) {
-                plusSize += 0.2;
+            if (svetlanaBackground.getBoundingClientRect().y <= 0 - 20) {
+                if (allowScroll === true) {
+                    plusSize += 0.2;
+                }
+                
             } else {
                 plusSize = 0;
             }
         }
         
         if (scrollBottomArea) {
-            if (svetlanaBackground.getBoundingClientRect().y >= -(document.querySelector('.background-wrap').style.height.slice(0, -2) -document.documentElement.clientHeight)) {
+            if (svetlanaBackground.getBoundingClientRect().y >= -(document.querySelector('.background-wrap').style.height.slice(0, -2) -document.documentElement.clientHeight - 15)) {
                 plusSize -= 0.2;
             } else {
                 plusSize = 0;
@@ -87,9 +91,11 @@ window.onload = function() {
     
     // Stop scroll handler
     function stopScrollHandler(e) {
+        scrollTopArea = e.pageY < scrollAreaHeight;
+        scrollBottomArea = e.pageY > document.documentElement.clientHeight - scrollAreaHeight;
         console.log(e.pageY)
-        if (e.pageY < 0 && !scrollTopArea) {
-            plusSize = 0;
+        if (e.pageY < 0) {
+            allowScroll = true;
             console.log('+')
         }
         
