@@ -163,7 +163,7 @@ body {
 
 @media (max-width: 360px) {
     .first-page {
-        top: -145vh;
+        top: -140vh;
         left: -113vh;
         transform: scale(0.4);
     }
