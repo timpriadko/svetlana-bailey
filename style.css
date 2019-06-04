@@ -152,6 +152,13 @@ body {
     .contacts-page-wrap {
         top: 0;
     }
+    .portfolio {
+        left: 30%;
+        top: 87vh;
+    }
+    .resume {
+        right: 30%;    
+    }
 }
 
 @media (max-width: 360px) {
