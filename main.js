@@ -7,10 +7,17 @@ window.onload = function() {
         // document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.75 + 'px' : '';
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 4.1 + 'px' : '';
+        // mobile bg height & scroll
+        document.querySelector('.main').style.height = document.documentElement.clientWidth * 1.75 + 'px';
+        document.querySelector('.first-page') ? window.scrollTo(0, 410) : window.scrollTo(0, 310);
+        
     }
     if (window.screen.width >= 640) {
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.7 + 'px' : '';
+        // mobile bg height & scroll
+        document.querySelector('.main').style.height = document.documentElement.clientWidth * 0.5 + 'px';
+        document.querySelector('.first-page') ? window.scrollTo(0, 560) : window.scrollTo(0, 170);
     }
     if (window.screen.width >= 768) {
         // // svetlana page
@@ -100,7 +107,6 @@ window.onload = function() {
     
     // Stop scroll handler
     function stopScrollHandler(e) {
-        console.log(e.pageY)
         if (e.pageY < 0) {
             allowScroll = false;
             plusSize = 0;

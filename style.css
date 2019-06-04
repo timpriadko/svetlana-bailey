@@ -129,30 +129,41 @@ body {
     }
 }
 
-@media (max-width: 768px) {    
+@media (max-width: 768px) {
     .first-page {
         top: -136vh;
         left: -46vh;
         transform: scale(0.7);
     }
+    .main {
+        position: relative;
+    }
+    .background-wrap {
+        position: absolute;
+    }
 }
 
 @media (max-width: 640px) {
     .first-page {
-        top: -394vh;
+        top: -240vh;
         left: -162vh;
         transform: scale(0.4);
+    }
+    .contacts-page-wrap {
+        top: 0;
     }
 }
 
 @media (max-width: 360px) {
     .first-page {
-        top: -196vh;
+        top: -135vh;
         left: -112vh;
         transform: scale(0.4);
     }
+    .contacts-page-wrap {
+        top: 0;
+    }
     .clampart {
-        position: absolute;
         top: 2vh;
         left: 10%;
     }
