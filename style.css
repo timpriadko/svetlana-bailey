@@ -130,16 +130,19 @@ body {
 }
 
 @media (max-width: 768px) {
-    .first-page {
-        top: -136vh;
-        left: -46vh;
-        transform: scale(0.7);
-    }
     .main {
         position: relative;
     }
     .background-wrap {
         position: absolute;
+    }
+    .first-page {
+        top: -43vh;
+        left: -46vh;
+        transform: scale(0.7);
+    }
+    .contacts-page-wrap {
+        top: 0;
     }
 }
 
@@ -161,10 +164,18 @@ body {
     }
 }
 
+@media (max-width: 414px) {
+    .first-page {
+        top: -117vh;
+        left: -95vh;
+        transform: scale(0.4);
+    }
+}
+
 @media (max-width: 360px) {
     .first-page {
         top: -140vh;
-        left: -113vh;
+        left: -115vh;
         transform: scale(0.4);
     }
     .contacts-page-wrap {

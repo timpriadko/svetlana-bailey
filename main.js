@@ -19,11 +19,14 @@ window.onload = function() {
         document.querySelector('.main').style.height = document.documentElement.clientWidth * 0.5 + 'px';
         document.querySelector('.first-page') ? window.scrollTo(0, 560) : window.scrollTo(0, 170);
     }
-    if (window.screen.width >= 768) {
+    if (window.screen.width >= 768 && window.screen.width < 1024) {
         // // svetlana page
         // document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.6 + 'px' : '';
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 2.7 + 'px' : '';
+        // mobile bg height & scroll
+        document.querySelector('.main').style.height = document.documentElement.clientWidth * 1.75 + 'px';
+        document.querySelector('.first-page') ? window.scrollTo(0, 970) : window.scrollTo(0, 510);
     }
     if (window.screen.width >= 1024) {
         // cv page
