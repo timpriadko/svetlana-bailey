@@ -8,7 +8,7 @@ window.onload = function() {
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 4.1 + 'px' : '';
         // mobile bg height & scroll
-        document.querySelector('.main').style.height = ((document.documentElement.clientWidth * 1.75) - 50) + 'px';
+        document.querySelector('.main').style.height = document.documentElement.clientWidth * 1.75 + 'px';
         document.querySelector('.first-page') ? window.scrollTo(0, 410) : window.scrollTo(0, 310);
         
     }

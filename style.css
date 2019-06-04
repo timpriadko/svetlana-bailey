@@ -163,8 +163,8 @@ body {
 
 @media (max-width: 360px) {
     .first-page {
-        top: -135vh;
-        left: -125vh;
+        top: -145vh;
+        left: -113vh;
         transform: scale(0.4);
     }
     .contacts-page-wrap {
