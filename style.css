@@ -157,7 +157,7 @@ body {
 @media (max-width: 360px) {
     .first-page {
         top: -135vh;
-        left: -112vh;
+        left: -125vh;
         transform: scale(0.4);
     }
     .contacts-page-wrap {
