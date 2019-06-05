@@ -9,7 +9,13 @@ window.onload = function() {
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 4.1 + 'px' : '';
         // mobile bg height & scroll
         document.querySelector('.main').style.height = document.documentElement.clientWidth * 1.75 + 'px';
-        document.querySelector('.first-page') ? window.scrollTo(0, 410) : window.scrollTo(0, 310);
+        document.querySelector('.first-page') ? window.scrollTo(0, 610) : window.scrollTo(0, 310);
+        
+    }
+    if (window.screen.width >= 414) {
+        // mobile bg height & scroll
+        document.querySelector('.main').style.height = document.documentElement.clientWidth * 1.75 + 'px';
+        document.querySelector('.first-page') ? window.scrollTo(0, 610) : window.scrollTo(0, 310);
         
     }
     if (window.screen.width >= 640) {
@@ -64,32 +70,34 @@ window.onload = function() {
     var m_top = 0;
 
     
-    setInterval(function() {
-        if (scrollTopArea) {
-            if (svetlanaBackground.getBoundingClientRect().y <= 0 - 20) {
-                if (allowScroll === true) {
-                    plusSize += 0.2;
+    if (window.screen.width >= 1024) {
+        setInterval(function() {
+            if (scrollTopArea) {
+                if (svetlanaBackground.getBoundingClientRect().y <= 0 - 20) {
+                    if (allowScroll === true) {
+                        plusSize += 0.2;
+                    }
+                    
+                } else {
+                    plusSize = 0;
                 }
-                
-            } else {
-                plusSize = 0;
             }
-        }
-        
-        if (scrollBottomArea) {
-            if (svetlanaBackground.getBoundingClientRect().y >= -(document.querySelector('.background-wrap').offsetHeight - document.documentElement.clientHeight - 15)) {                
-                if (allowScroll === true) {
-                    plusSize -= 0.2;
-                }                
-            } else {
-                plusSize = 0;
+            
+            if (scrollBottomArea) {
+                if (svetlanaBackground.getBoundingClientRect().y >= -(document.querySelector('.background-wrap').offsetHeight - document.documentElement.clientHeight - 15)) {                
+                    if (allowScroll === true) {
+                        plusSize -= 0.2;
+                    }                
+                } else {
+                    plusSize = 0;
+                }
             }
-        }
-
-        m_top = m_top + plusSize;
-        svetlanaBackground ? svetlanaBackground.style.marginTop = m_top + 'px' : '';
-                
-    }, interval);
+    
+            m_top = m_top + plusSize;
+            svetlanaBackground ? svetlanaBackground.style.marginTop = m_top + 'px' : '';
+                    
+        }, interval);
+    }
 
     // Scroll handler
     function scrollHandler(e) {
