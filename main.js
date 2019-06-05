@@ -62,16 +62,14 @@ window.onload = function() {
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.1 + 'px' : '';
     }
 
-    var mql = window.matchMedia("(orientation: portrait)");
-
     window.addEventListener('mousemove', scrollHandler, false);
     window.addEventListener('mouseout', stopScrollHandler, false);
     window.addEventListener("orientationchange", function() {
-        if (!mql.matches) {  
-            // Landscape orientation
+        // Landscape orientation
+        if (screen.orientation.angle === 90) {
             if (window.screen.width >= 640 && window.screen.height >= 320) {
-                document.querySelector('.first-page') ? window.scrollTo(0, 310) : window.scrollTo(0, 310);
-                
+                console.log('+')
+                document.querySelector('.first-page') ? window.scrollTo(0, 210) : window.scrollTo(0, 310);
             }
         }
     }, false);
