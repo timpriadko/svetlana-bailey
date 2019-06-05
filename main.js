@@ -148,6 +148,6 @@ window.onload = function() {
 window.addEventListener("orientationchange", function() {
     // Landscape orientation
     if (screen.orientation.angle === 90) {
-        window.location.reload(false);
+        window.location.reload(true);
     }
 });
