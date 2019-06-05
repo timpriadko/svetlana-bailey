@@ -2,7 +2,7 @@ window.onload = function() {
     var pageHeight = document.documentElement.clientWidth * 1.49 + 'px';
     // document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = pageHeight : '';
 
-    if (window.screen.width >= 360) {
+    if (window.screen.width >= 360 && window.screen.height >=640) {
         // // svetlana page
         // document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.75 + 'px' : '';
         // cv page
@@ -10,6 +10,10 @@ window.onload = function() {
         // mobile bg height & scroll
         document.querySelector('.main').style.height = document.documentElement.clientWidth * 1.75 + 'px';
         document.querySelector('.first-page') ? window.scrollTo(0, 610) : window.scrollTo(0, 310);
+        
+    }
+    if (window.screen.width >= 360 && window.screen.height >= 720) {
+        document.querySelector('.first-page') ? window.scrollTo(0, 810) : window.scrollTo(0, 310);
         
     }
     if (window.screen.width >= 414) {
@@ -24,6 +28,10 @@ window.onload = function() {
         // mobile bg height & scroll
         document.querySelector('.main').style.height = document.documentElement.clientWidth * 0.5 + 'px';
         document.querySelector('.first-page') ? window.scrollTo(0, 560) : window.scrollTo(0, 170);
+    }
+    if (window.screen.width >= 720) {
+        // mobile bg height & scroll
+        document.querySelector('.first-page') ? window.scrollTo(0, 530) : window.scrollTo(0, 170);
     }
     if (window.screen.width >= 768 && window.screen.width < 1024) {
         // // svetlana page
@@ -123,6 +131,7 @@ window.onload = function() {
             plusSize = 0;
         }
         if (e.pageY > document.documentElement.clientHeight) {
+            console.log('+')
             allowScroll = false;
             plusSize = 0;
         }

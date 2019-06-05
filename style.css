@@ -20,7 +20,7 @@ body {
 .contacts-page-wrap {
     background-color: #000000;
     color: #ffffff;
-    font-size: 1.3em;
+    font-size: 1.5em;
     top: -50vh;
 }
 .contacts-page-wrap a {
@@ -38,7 +38,7 @@ body {
 }
 .svetlana-bailey {
     position: absolute;
-    top: 49vh;
+    top: 48.5vh;
     left: 20%
 }
 .mail {
@@ -168,6 +168,33 @@ body {
     .contacts-page-wrap {
         top: 0;
     }
+    .svetlana-bailey {
+        top: 48.4vh;
+    }
+}
+
+@media screen and (max-device-width: 720px ) {
+    .first-page {
+        top: -249vh;
+        left: -166vh;
+        transform: scale(0.38);
+    }
+    .svetlana-bailey {
+        top: 45vh;
+    }
+    .portfolio {
+        left: 37%;
+    }
+    .resume {
+        right: 37%;    
+    }
+    .adress {
+        top: 135vh;
+        right: 5%;
+    }
+    .contacts-page-wrap {
+        font-size: 0.9em;
+    }
 }
 
 @media (max-width: 640px) {
@@ -178,6 +205,10 @@ body {
     }
     .contacts-page-wrap {
         top: 0;
+        font-size: 0.9em;
+    }
+    .svetlana-bailey {
+        top: 45.2vh;
     }
     .portfolio {
         left: 30%;
@@ -193,16 +224,28 @@ body {
         top: -118vh;
         left: -95vh;
         transform: scale(0.4);
-        margin-bottom: 360px;
+    }
+    .svetlana-bailey {
+        top: 41.2vh;
     }
 }
 
-@media (max-width: 360px) {
+@media screen and (max-device-width: 360px ) and (max-device-height: 720px ) {
     .first-page {
-        top: -135vh;
-        left: -115vh;
-        transform: scale(0.4);
-        margin-bottom: 120px;
+        top: -150vh;
+        left: -104vh;
+        transform: scale(0.25);
+    }
+    .svetlana-bailey {
+        top: 42vh;
+    }
+}
+
+@media screen and (max-device-width: 360px ) and (max-device-height: 640px ) {
+    .first-page {
+        top: -171vh;
+        left: -117vh;
+        transform: scale(0.24);
     }
     .contacts-page-wrap {
         top: 0;
@@ -215,7 +258,8 @@ body {
         right: 22%
     }
     .svetlana-bailey {
-        left: 8%
+        left: 8%;
+        top: 47.2vh;
     }
     .rights-reserved span {
         display: block;
