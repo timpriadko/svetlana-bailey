@@ -203,16 +203,20 @@ body {
 
 @media (max-width: 640px) {
     .first-page {
-        top: -240vh;
-        left: -162vh;
-        transform: scale(0.4);
+        top: -280vh;
+        left: -182vh;
+        -moz-transform: scale(0.38); /* Для Firefox */
+        -ms-transform: scale(0.38); /* Для IE */
+        -webkit-transform: scale(0.38); /* Для Safari, Chrome, iOS */
+        -o-transform: scale(0.38);
+        transform: scale(0.38);
     }
     .contacts-page-wrap {
         top: 0;
         font-size: 0.9em;
     }
     .svetlana-bailey {
-        top: 45.2vh;
+        top: 43.2vh;
     }
     .portfolio {
         left: 30%;
@@ -267,7 +271,7 @@ body {
     }
     .svetlana-bailey {
         left: 8%;
-        top: 48.2vh;
+        top: 49vh;
     }
     .rights-reserved span {
         display: block;
