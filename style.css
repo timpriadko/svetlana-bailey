@@ -175,8 +175,12 @@ body {
 
 @media screen and (max-device-width: 720px ) {
     .first-page {
-        top: -249vh;
-        left: -166vh;
+        top: -260vh;
+        left: -174vh;
+        -moz-transform: scale(0.38); /* Для Firefox */
+        -ms-transform: scale(0.38); /* Для IE */
+        -webkit-transform: scale(0.38); /* Для Safari, Chrome, iOS */
+        -o-transform: scale(0.38); 
         transform: scale(0.38);
     }
     .svetlana-bailey {
@@ -243,8 +247,12 @@ body {
 
 @media screen and (max-device-width: 360px ) and (max-device-height: 640px ) {
     .first-page {
-        top: -177vh;
+        top: -179vh;
         left: -122vh;
+        -moz-transform: scale(0.24); /* Для Firefox */
+        -ms-transform: scale(0.24); /* Для IE */
+        -webkit-transform: scale(0.24); /* Для Safari, Chrome, iOS */
+        -o-transform: scale(0.24);
         transform: scale(0.24);
     }
     .contacts-page-wrap {
@@ -259,7 +267,7 @@ body {
     }
     .svetlana-bailey {
         left: 8%;
-        top: 47.2vh;
+        top: 48.2vh;
     }
     .rights-reserved span {
         display: block;
