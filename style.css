@@ -243,8 +243,8 @@ body {
 
 @media screen and (max-device-width: 360px ) and (max-device-height: 640px ) {
     .first-page {
-        top: -171vh;
-        left: -117vh;
+        top: -177vh;
+        left: -122vh;
         transform: scale(0.24);
     }
     .contacts-page-wrap {
