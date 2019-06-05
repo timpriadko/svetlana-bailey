@@ -64,15 +64,6 @@ window.onload = function() {
 
     window.addEventListener('mousemove', scrollHandler, false);
     window.addEventListener('mouseout', stopScrollHandler, false);
-    window.addEventListener("orientationchange", function() {
-        // Landscape orientation
-        if (screen.orientation.angle === 90) {
-            if (window.screen.width >= 640 && window.screen.height >= 320) {
-                console.log('+')
-                document.querySelector('.first-page') ? window.scrollTo(0, 210) : window.scrollTo(0, 310);
-            }
-        }
-    }, false);
 
     //UI
     var svetlanaBackground = document.querySelector('.background-wrap');
@@ -153,3 +144,10 @@ window.onload = function() {
         }
     }
 }
+
+window.addEventListener("orientationchange", function() {
+    // Landscape orientation
+    if (screen.orientation.angle === 90) {
+        window.location.reload(false);
+    }
+});
