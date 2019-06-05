@@ -203,7 +203,7 @@ body {
 
 @media (max-width: 640px) {
     .first-page {
-        top: -280vh;
+        top: -278vh;
         left: -182vh;
         -moz-transform: scale(0.38); /* Для Firefox */
         -ms-transform: scale(0.38); /* Для IE */
@@ -216,7 +216,7 @@ body {
         font-size: 0.9em;
     }
     .svetlana-bailey {
-        top: 43.2vh;
+        top: 46.2vh;
     }
     .portfolio {
         left: 30%;
