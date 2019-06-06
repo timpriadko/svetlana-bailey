@@ -204,12 +204,12 @@ body {
 @media (max-width: 640px) {
     .first-page {
         top: -278vh;
-        left: -182vh;
-        -moz-transform: scale(0.35); /* Для Firefox */
-        -ms-transform: scale(0.35); /* Для IE */
-        -webkit-transform: scale(0.35); /* Для Safari, Chrome, iOS */
-        -o-transform: scale(0.35);
-        transform: scale(0.35);
+        left: -183vh;
+        -moz-transform: scale(0.36); /* Для Firefox */
+        -ms-transform: scale(0.36); /* Для IE */
+        -webkit-transform: scale(0.36); /* Для Safari, Chrome, iOS */
+        -o-transform: scale(0.36);
+        transform: scale(0.36);
     }
     .contacts-page-wrap {
         top: 0;
