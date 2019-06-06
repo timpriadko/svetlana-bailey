@@ -1,14 +1,10 @@
 window.onload = function() {
     var pageHeight = document.documentElement.clientWidth * 1.49 + 'px';
-    // document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = pageHeight : '';
 
-    if (window.screen.width >= 360 && window.screen.height >=640) {
-        // // svetlana page
-        // document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.75 + 'px' : '';
+    if (window.screen.width >= 360 && window.screen.height >= 640) {
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 4.1 + 'px' : '';
         // mobile bg height & scroll
-        // document.querySelector('.main').style.height = document.documentElement.clientWidth * 1.75 + 'px';
         document.querySelector('.first-page') ? window.scrollTo(0, 610) : window.scrollTo(0, 310);
         
     }
@@ -18,15 +14,11 @@ window.onload = function() {
     }
     if (window.screen.width >= 414) {
         // mobile bg height & scroll
-        document.querySelector('.main').style.height = document.documentElement.clientWidth * 1.75 + 'px';
         document.querySelector('.first-page') ? window.scrollTo(0, 610) : window.scrollTo(0, 310);
         
     }
     if (window.screen.width >= 640) {
-        // cv page
-        // document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.7 + 'px' : '';
         // mobile bg height & scroll
-        document.querySelector('.main').style.height = document.documentElement.clientWidth * 0.5 + 'px';
         document.querySelector('.first-page') ? window.scrollTo(0, 560) : window.scrollTo(0, 170);
     }
     if (window.screen.width >= 720) {
@@ -34,8 +26,6 @@ window.onload = function() {
         document.querySelector('.first-page') ? window.scrollTo(0, 530) : window.scrollTo(0, 170);
     }
     if (window.screen.width >= 768 && window.screen.width < 1024) {
-        // // svetlana page
-        // document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.6 + 'px' : '';
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 2.7 + 'px' : '';
         // mobile bg height & scroll
@@ -47,8 +37,6 @@ window.onload = function() {
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.7 + 'px' : '';
     }
     if (window.screen.width >= 1280) {
-        // // svetlana page
-        // document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.6 + 'px' : '';
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.5 + 'px' : '';
     }
@@ -56,8 +44,6 @@ window.onload = function() {
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.3 + 'px' : '';
     }
     if (window.screen.width >= 1920) {
-        // // svetlana page
-        // document.querySelector('.background-wrap') ? document.querySelector('.background-wrap').style.height = document.documentElement.clientWidth * 1.5 + 'px' : '';
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.1 + 'px' : '';
     }
@@ -150,7 +136,8 @@ window.addEventListener("orientationchange", function() {
     if (screen.orientation.angle === 90 || screen.orientation.angle === -90) {
         if (window.screen.width >= 640) {
             console.log('+');
-            document.querySelector('.first-page') ? window.scrollTo(0, 490) : window.scrollTo(0, 170);
+            // document.querySelector('.first-page') ? window.scrollTo(0, 490) : window.scrollTo(0, 170);
+            window.location.reload(true);
         }
     }
 });
