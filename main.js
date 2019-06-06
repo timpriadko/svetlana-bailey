@@ -8,7 +8,7 @@ window.onload = function() {
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 4.1 + 'px' : '';
         // mobile bg height & scroll
-        document.querySelector('.main').style.height = document.documentElement.clientWidth * 1.75 + 'px';
+        // document.querySelector('.main').style.height = document.documentElement.clientWidth * 1.75 + 'px';
         document.querySelector('.first-page') ? window.scrollTo(0, 610) : window.scrollTo(0, 310);
         
     }
@@ -24,10 +24,10 @@ window.onload = function() {
     }
     if (window.screen.width >= 640) {
         // cv page
-        document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.7 + 'px' : '';
+        // document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.7 + 'px' : '';
         // mobile bg height & scroll
         document.querySelector('.main').style.height = document.documentElement.clientWidth * 0.5 + 'px';
-        document.querySelector('.first-page') ? window.scrollTo(0, 490) : window.scrollTo(0, 170);
+        document.querySelector('.first-page') ? window.scrollTo(0, 560) : window.scrollTo(0, 170);
     }
     if (window.screen.width >= 720) {
         // mobile bg height & scroll
@@ -148,8 +148,9 @@ window.onload = function() {
 window.addEventListener("orientationchange", function() {
     // Landscape orientation
     if (screen.orientation.angle === 90 || screen.orientation.angle === -90) {
-        console.log('+');
-        document.querySelector('.first-page') ? window.scrollTo(0, 560) : window.scrollTo(0, 170);
-        // window.location.reload(true);
+        if (window.screen.width >= 640) {
+            console.log('+');
+            document.querySelector('.first-page') ? window.scrollTo(0, 490) : window.scrollTo(0, 170);
+        }
     }
 });

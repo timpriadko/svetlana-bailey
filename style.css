@@ -205,11 +205,11 @@ body {
     .first-page {
         top: -278vh;
         left: -182vh;
-        -moz-transform: scale(0.38); /* Для Firefox */
-        -ms-transform: scale(0.38); /* Для IE */
-        -webkit-transform: scale(0.38); /* Для Safari, Chrome, iOS */
-        -o-transform: scale(0.38);
-        transform: scale(0.38);
+        -moz-transform: scale(0.35); /* Для Firefox */
+        -ms-transform: scale(0.35); /* Для IE */
+        -webkit-transform: scale(0.35); /* Для Safari, Chrome, iOS */
+        -o-transform: scale(0.35);
+        transform: scale(0.35);
     }
     .contacts-page-wrap {
         top: 0;
