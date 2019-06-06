@@ -27,7 +27,7 @@ window.onload = function() {
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.7 + 'px' : '';
         // mobile bg height & scroll
         document.querySelector('.main').style.height = document.documentElement.clientWidth * 0.5 + 'px';
-        document.querySelector('.first-page') ? window.scrollTo(0, 560) : window.scrollTo(0, 170);
+        document.querySelector('.first-page') ? window.scrollTo(0, 430) : window.scrollTo(0, 170);
     }
     if (window.screen.width >= 720) {
         // mobile bg height & scroll
