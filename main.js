@@ -132,12 +132,12 @@ window.onload = function() {
 }
 
 window.addEventListener("orientationchange", function() {
+    window.location.reload(true);
     // Landscape orientation
-    if (screen.orientation.angle === 90 || screen.orientation.angle === -90) {
-        if (window.screen.width >= 640) {
-            console.log('+');
-            // document.querySelector('.first-page') ? window.scrollTo(0, 490) : window.scrollTo(0, 170);
-            window.location.reload(true);
-        }
-    }
+    // if (screen.orientation.angle === 90 || screen.orientation.angle === -90) {
+    //     if (window.screen.width >= 640) {
+    //         console.log('+');
+    //         window.location.reload(true);
+    //     }
+    // }
 });
