@@ -1,98 +1,118 @@
 body {
     margin: 0;
 }
+
 .main {
     font-family: 'Crimson Text', serif;
 }
+
 .background-wrap {
     background-size: 100% 100%;
     width: 100%;
     position: fixed;
     top: -140vh;
 }
+
 .first-page {
-    cursor: url(img/Cursor.png) 32 32,default;
+    cursor: url(img/Cursor.png) 32 32, default;
     background-image: url(img/website-landing.jpg);
     background-repeat: no-repeat;
     width: 1920px;
     height: 2879px;
 }
+
 .contacts-page-wrap {
     background-color: #000000;
     color: #ffffff;
     font-size: 1.5em;
     top: -50vh;
 }
+
 .contacts-page-wrap a {
     color: #ffffff;
 }
+
 .clampart {
     position: absolute;
     top: 4vh;
     left: 30%;
 }
+
 .iscp {
     position: absolute;
     top: 19vh;
     right: 30%
 }
+
 .svetlana-bailey {
     position: absolute;
     top: 48.5vh;
     left: 20%
 }
+
 .mail {
     position: absolute;
     top: 65vh;
     right: 5%;
 }
+
 .portfolio {
     position: absolute;
     top: 90vh;
     left: 40%;
 }
+
 .resume {
     position: absolute;
     top: 100vh;
-    right: 40%;    
+    right: 40%;
 }
+
 .gallery-block {
     position: absolute;
     top: 110vh;
     left: 3%;
 }
+
 .gallery-block p {
     margin-top: 0;
     margin-bottom: 0;
 }
+
 .adress {
     position: absolute;
     top: 145vh;
     right: 20%;
 }
+
 .adress p {
     margin-top: 0;
     margin-bottom: 0;
 }
+
 .blue-sky {
     position: absolute;
     top: 179vh;
     left: 20%;
 }
+
 .rights-reserved {
     width: 100%;
     position: absolute;
     bottom: 40px;
     text-align: center;
 }
+
 .rights-reserved span {
     margin-left: 50px;
 }
 
+
 /************************* Responsive *************************/
+
 @media screen and (min-device-width: 1920px) {
     .first-page {
-        top: -142vh;
+        top: -148vh;
         left: 0;
         transform: scale(1);
     }
@@ -113,40 +133,44 @@ body {
         transform: scale(0.75);
     }
 }
-@media screen and (max-device-width: 1280px ) and (max-device-height: 1024px ) {
+
+@media screen and (max-device-width: 1280px) and (max-device-height: 1024px) {
     .first-page {
         top: -136vh;
         left: -16vh;
         transform: scale(0.9);
     }
 }
-@media screen and (max-device-width: 1280px ) and (max-device-height: 800px ) {
+
+@media screen and (max-device-width: 1280px) and (max-device-height: 800px) {
     .first-page {
         top: -183vh;
         left: -32vh;
         transform: scale(0.75);
     }
 }
-@media screen and (max-device-width: 1280px ) and (max-device-height: 720px ) {
+
+@media screen and (max-device-width: 1280px) and (max-device-height: 720px) {
     .first-page {
         top: -196vh;
         left: -32vh;
         transform: scale(0.75);
     }
 }
-/* @media (max-width: 1280px) {    
-    .first-page {
-        top: -136vh;
-        left: -16vh;
-        transform: scale(0.9);
-    }
-} */
 
-@media (max-width: 1024px) {
+@media screen and (max-device-width: 1024px) and (max-device-height: 768px) {
     .first-page {
         top: -183vh;
         left: -42vh;
         transform: scale(0.7);
+    }
+}
+
+@media screen and (max-device-width: 1024px) and (max-device-height: 640px) {
+    .first-page {
+        top: -220vh;
+        left: -53vh;
+        transform: scale(0.67);
     }
 }
 
@@ -173,14 +197,17 @@ body {
     }
 }
 
-@media screen and (max-device-width: 720px ) {
+@media screen and (max-device-width: 720px) {
     .first-page {
         top: -260vh;
         left: -174vh;
-        -moz-transform: scale(0.38); /* Для Firefox */
-        -ms-transform: scale(0.38); /* Для IE */
-        -webkit-transform: scale(0.38); /* Для Safari, Chrome, iOS */
-        -o-transform: scale(0.38); 
+        -moz-transform: scale(0.38);
+        /* Для Firefox */
+        -ms-transform: scale(0.38);
+        /* Для IE */
+        -webkit-transform: scale(0.38);
+        /* Для Safari, Chrome, iOS */
+        -o-transform: scale(0.38);
         transform: scale(0.38);
     }
     .svetlana-bailey {
@@ -190,7 +217,7 @@ body {
         left: 37%;
     }
     .resume {
-        right: 37%;    
+        right: 37%;
     }
     .adress {
         top: 135vh;
@@ -205,9 +232,12 @@ body {
     .first-page {
         top: -278vh;
         left: -183vh;
-        -moz-transform: scale(0.36); /* Для Firefox */
-        -ms-transform: scale(0.36); /* Для IE */
-        -webkit-transform: scale(0.36); /* Для Safari, Chrome, iOS */
+        -moz-transform: scale(0.36);
+        /* Для Firefox */
+        -ms-transform: scale(0.36);
+        /* Для IE */
+        -webkit-transform: scale(0.36);
+        /* Для Safari, Chrome, iOS */
         -o-transform: scale(0.36);
         transform: scale(0.36);
     }
@@ -223,7 +253,7 @@ body {
         top: 87vh;
     }
     .resume {
-        right: 30%;    
+        right: 30%;
     }
 }
 
@@ -238,7 +268,7 @@ body {
     }
 }
 
-@media screen and (max-device-width: 360px ) and (max-device-height: 720px ) {
+@media screen and (max-device-width: 360px) and (max-device-height: 720px) {
     .first-page {
         top: -150vh;
         left: -104vh;
@@ -249,13 +279,16 @@ body {
     }
 }
 
-@media screen and (max-device-width: 360px ) and (max-device-height: 640px ) {
+@media screen and (max-device-width: 360px) and (max-device-height: 640px) {
     .first-page {
         top: -179vh;
         left: -122vh;
-        -moz-transform: scale(0.24); /* Для Firefox */
-        -ms-transform: scale(0.24); /* Для IE */
-        -webkit-transform: scale(0.24); /* Для Safari, Chrome, iOS */
+        -moz-transform: scale(0.24);
+        /* Для Firefox */
+        -ms-transform: scale(0.24);
+        /* Для IE */
+        -webkit-transform: scale(0.24);
+        /* Для Safari, Chrome, iOS */
         -o-transform: scale(0.24);
         transform: scale(0.24);
     }
@@ -282,7 +315,7 @@ body {
         left: 30%;
     }
     .resume {
-        right: 30%;    
+        right: 30%;
     }
     .adress {
         right: 5%;
