@@ -6,16 +6,16 @@ window.onload = function() {
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 4.1 + 'px' : '';
         // mobile bg height & scroll
         document.querySelector('.first-page') ? window.scrollTo(0, 610) : window.scrollTo(0, 310);
-        
+
     }
     if (window.screen.width >= 360 && window.screen.height >= 720) {
         document.querySelector('.first-page') ? window.scrollTo(0, 810) : window.scrollTo(0, 310);
-        
+
     }
     if (window.screen.width >= 414) {
         // mobile bg height & scroll
         document.querySelector('.first-page') ? window.scrollTo(0, 610) : window.scrollTo(0, 310);
-        
+
     }
     if (window.screen.width >= 640) {
         // mobile bg height & scroll
@@ -56,14 +56,14 @@ window.onload = function() {
     var cvPage = document.querySelector('.contacts-page-wrap');
     var scrollAreaHeight = document.documentElement.clientHeight / 10;
 
-    
+
     var scrollTopArea, scrollBottomArea;
     var allowScroll = true;
     var interval = 1000 / 35;
     var plusSize = 0;
     var m_top = 0;
 
-    
+
     if (window.screen.width >= 1024) {
         setInterval(function() {
             if (scrollTopArea) {
@@ -71,25 +71,25 @@ window.onload = function() {
                     if (allowScroll === true) {
                         plusSize += 0.2;
                     }
-                    
+
                 } else {
                     plusSize = 0;
                 }
             }
-            
+
             if (scrollBottomArea) {
-                if (svetlanaBackground.getBoundingClientRect().y >= -(document.querySelector('.background-wrap').offsetHeight - document.documentElement.clientHeight - 15)) {                
+                if (svetlanaBackground.getBoundingClientRect().y >= -(document.querySelector('.background-wrap').offsetHeight - document.documentElement.clientHeight - 15)) {
                     if (allowScroll === true) {
                         plusSize -= 0.2;
-                    }                
+                    }
                 } else {
                     plusSize = 0;
                 }
             }
-    
+
             m_top = m_top + plusSize;
             svetlanaBackground ? svetlanaBackground.style.marginTop = m_top + 'px' : '';
-                    
+
         }, interval);
     }
 
@@ -97,7 +97,7 @@ window.onload = function() {
     function scrollHandler(e) {
         scrollTopArea = e.pageY < scrollAreaHeight;
         scrollBottomArea = e.pageY > document.documentElement.clientHeight - scrollAreaHeight;
-        
+
         if (!scrollTopArea && !scrollBottomArea) {
             plusSize = 0;
             allowScroll = true;
@@ -109,7 +109,7 @@ window.onload = function() {
             allowScroll = true;
         }
     }
-    
+
     // Stop scroll handler
     function stopScrollHandler(e) {
         if (e.pageY < 0) {

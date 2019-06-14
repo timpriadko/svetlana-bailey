@@ -10,7 +10,7 @@ body {
     background-size: 100% 100%;
     width: 100%;
     position: fixed;
-    top: -140vh;
+    top: -1430px;
 }
 
 .first-page {
@@ -110,9 +110,17 @@ body {
 
 /************************* Responsive *************************/
 
-@media screen and (min-device-width: 1920px) {
+@media screen and (max-device-width: 1921px) {
     .first-page {
-        top: -148vh;
+        left: 0;
+        transform: scale(1.2);
+        top: -1430px;
+    }
+}
+
+@media screen and (max-device-width: 1920px) {
+    .first-page {
+        /* top: -148vh; */
         left: 0;
         transform: scale(1);
     }
@@ -120,7 +128,7 @@ body {
 
 @media screen and (max-device-width: 1600px) {
     .first-page {
-        top: -156vh;
+        /* top: -156vh; */
         left: -14vh;
         transform: scale(0.9);
     }
@@ -128,7 +136,7 @@ body {
 
 @media screen and (max-device-width: 1366px) {
     .first-page {
-        top: -183vh;
+        /* top: -183vh; */
         left: -32vh;
         transform: scale(0.75);
     }
@@ -136,7 +144,7 @@ body {
 
 @media screen and (max-device-width: 1280px) and (max-device-height: 1024px) {
     .first-page {
-        top: -136vh;
+        /* top: -136vh; */
         left: -16vh;
         transform: scale(0.9);
     }
@@ -144,7 +152,7 @@ body {
 
 @media screen and (max-device-width: 1280px) and (max-device-height: 800px) {
     .first-page {
-        top: -183vh;
+        /* top: -183vh; */
         left: -32vh;
         transform: scale(0.75);
     }
@@ -152,7 +160,7 @@ body {
 
 @media screen and (max-device-width: 1280px) and (max-device-height: 720px) {
     .first-page {
-        top: -196vh;
+        /* top: -196vh; */
         left: -32vh;
         transform: scale(0.75);
     }
@@ -259,7 +267,7 @@ body {
 
 @media (max-width: 414px) {
     .first-page {
-        top: -118vh;
+        top: -1430px;
         left: -95vh;
         transform: scale(0.4);
     }
