@@ -107,7 +107,7 @@ window.onload = function() {
                         plusSize = 0;
                     }
                 } else {
-                    if (svetlanaBackground.getBoundingClientRect().y >= -(document.querySelector('.background-wrap').offsetHeight - document.documentElement.clientHeight - 15)) {
+                    if (svetlanaBackground.getBoundingClientRect().y >= -(document.querySelector('.background-wrap').offsetHeight - document.documentElement.clientHeight - 17)) {
                         if (allowScroll === true) {
                             plusSize -= 0.2;
                         }
