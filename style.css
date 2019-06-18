@@ -10,7 +10,7 @@ body {
     background-size: 100% 100%;
     width: 100%;
     position: fixed;
-    top: -1430px;
+    /* top: -1430px; */
 }
 
 .first-page {
@@ -110,7 +110,7 @@ body {
 
 /************************* Responsive *************************/
 
-@media screen and (max-device-width: 1921px) {
+@media screen and (min-device-width: 1921px) {
     .first-page {
         left: 0;
         transform: scale(1.2);
@@ -120,6 +120,7 @@ body {
 
 @media screen and (max-device-width: 1920px) {
     .first-page {
+        top: -1430px;
         /* top: -148vh; */
         left: 0;
         transform: scale(1);
@@ -168,7 +169,7 @@ body {
 
 @media screen and (max-device-width: 1024px) and (max-device-height: 768px) {
     .first-page {
-        top: -183vh;
+        /* top: -183vh; */
         left: -42vh;
         transform: scale(0.7);
     }
@@ -176,7 +177,7 @@ body {
 
 @media screen and (max-device-width: 1024px) and (max-device-height: 640px) {
     .first-page {
-        top: -220vh;
+        /* top: -220vh; */
         left: -53vh;
         transform: scale(0.67);
     }
@@ -193,7 +194,7 @@ body {
         position: absolute;
     }
     .first-page {
-        top: -43vh;
+        /* top: -43vh; */
         left: -46vh;
         transform: scale(0.7);
     }
@@ -205,18 +206,18 @@ body {
     }
 }
 
-@media screen and (max-device-width: 720px) {
+@media screen and (max-device-width: 740px) {
     .first-page {
         top: -260vh;
-        left: -174vh;
-        -moz-transform: scale(0.38);
+        left: -177vh;
+        -moz-transform: scale(0.42);
         /* Для Firefox */
-        -ms-transform: scale(0.38);
+        -ms-transform: scale(0.42);
         /* Для IE */
-        -webkit-transform: scale(0.38);
+        -webkit-transform: scale(0.42);
         /* Для Safari, Chrome, iOS */
         -o-transform: scale(0.38);
-        transform: scale(0.38);
+        transform: scale(0.42);
     }
     .svetlana-bailey {
         top: 45vh;
@@ -238,7 +239,7 @@ body {
 
 @media (max-width: 640px) {
     .first-page {
-        top: -278vh;
+        /* top: -278vh; */
         left: -183vh;
         -moz-transform: scale(0.36);
         /* Для Firefox */
@@ -267,7 +268,7 @@ body {
 
 @media (max-width: 414px) {
     .first-page {
-        top: -1430px;
+        /* top: -1430px; */
         left: -95vh;
         transform: scale(0.4);
     }
@@ -278,7 +279,7 @@ body {
 
 @media screen and (max-device-width: 360px) and (max-device-height: 720px) {
     .first-page {
-        top: -150vh;
+        /* top: -150vh; */
         left: -104vh;
         transform: scale(0.25);
     }
@@ -289,7 +290,7 @@ body {
 
 @media screen and (max-device-width: 360px) and (max-device-height: 640px) {
     .first-page {
-        top: -179vh;
+        /* top: -179vh; */
         left: -122vh;
         -moz-transform: scale(0.24);
         /* Для Firefox */

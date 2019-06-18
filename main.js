@@ -1,49 +1,54 @@
 window.onload = function() {
     var pageHeight = document.documentElement.clientWidth * 1.49 + 'px';
+   
 
     if (window.screen.width >= 360 && window.screen.height >= 640) {
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 4.1 + 'px' : '';
         // mobile bg height & scroll
-        document.querySelector('.first-page') ? window.scrollTo(0, 610) : window.scrollTo(0, 310);
+        document.querySelector('.first-page') ? window.scrollTo(0, 1430) : window.scrollTo(0, 310);
 
     }
     if (window.screen.width >= 360 && window.screen.height >= 720) {
-        document.querySelector('.first-page') ? window.scrollTo(0, 810) : window.scrollTo(0, 310);
+        document.querySelector('.first-page') ? window.scrollTo(0, 1430) : window.scrollTo(0, 310);
 
     }
     if (window.screen.width >= 414) {
         // mobile bg height & scroll
-        document.querySelector('.first-page') ? window.scrollTo(0, 610) : window.scrollTo(0, 310);
+        document.querySelector('.first-page') ? window.scrollTo(0, 1430) : window.scrollTo(0, 310);
 
     }
     if (window.screen.width >= 640) {
         // mobile bg height & scroll
-        document.querySelector('.first-page') ? window.scrollTo(0, 560) : window.scrollTo(0, 170);
+        document.querySelector('.first-page') ? window.scrollTo(0, 1430) : window.scrollTo(0, 170);
     }
     if (window.screen.width >= 720) {
         // mobile bg height & scroll
-        document.querySelector('.first-page') ? window.scrollTo(0, 530) : window.scrollTo(0, 170);
+        document.querySelector('.first-page') ? window.scrollTo(0, (1430)) : window.scrollTo(0, 170);
     }
     if (window.screen.width >= 768 && window.screen.width < 1024) {
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 2.7 + 'px' : '';
         // mobile bg height & scroll
         document.querySelector('.main').style.height = document.documentElement.clientWidth * 1.75 + 'px';
-        document.querySelector('.first-page') ? window.scrollTo(0, 970) : window.scrollTo(0, 510);
+        document.querySelector('.first-page') ? window.scrollTo(0, 1430) : window.scrollTo(0, 510);
     }
     if (window.screen.width >= 1024) {
+        document.querySelector('.first-page') ? window.scrollTo(0, 1430) : '';
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.7 + 'px' : '';
     }
     if (window.screen.width >= 1280) {
+        document.querySelector('.first-page') ? window.scrollTo(0, 1430) : '';
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.5 + 'px' : '';
     }
     if (window.screen.width >= 1366) {
+        document.querySelector('.first-page') ? window.scrollTo(0, 1430) : '';
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.3 + 'px' : '';
     }
     if (window.screen.width >= 1920) {
+        document.querySelector('.first-page') ? window.scrollTo(0, 1430) : '';
         // cv page
         document.querySelector('.contacts-page-wrap') ? document.querySelector('.contacts-page-wrap').style.height = document.documentElement.clientWidth * 1.1 + 'px' : '';
     }
@@ -78,7 +83,7 @@ window.onload = function() {
             }
 
             if (scrollBottomArea) {
-                if (svetlanaBackground.getBoundingClientRect().y >= -(document.querySelector('.background-wrap').offsetHeight - document.documentElement.clientHeight - 15)) {
+                if (svetlanaBackground.getBoundingClientRect().y >= -(document.querySelector('.background-wrap').offsetHeight - document.documentElement.clientHeight * 2)) {
                     if (allowScroll === true) {
                         plusSize -= 0.2;
                     }
