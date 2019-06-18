@@ -209,7 +209,7 @@ body {
 @media screen and (max-device-width: 740px) {
     .first-page {
         top: -260vh;
-        left: -177vh;
+        left: -150vh;
         -moz-transform: scale(0.42);
         /* Для Firefox */
         -ms-transform: scale(0.42);
@@ -268,7 +268,7 @@ body {
 
 @media (max-width: 414px) {
     .first-page {
-        /* top: -1430px; */
+        top: -868px;
         left: -95vh;
         transform: scale(0.4);
     }
@@ -276,10 +276,9 @@ body {
         top: 41.2vh;
     }
 }
-
-@media screen and (max-device-width: 360px) and (max-device-height: 720px) {
+@media screen and (max-device-width: 360px) and (max-device-height: 740px) {
     .first-page {
-        /* top: -150vh; */
+        top: -150vh;
         left: -104vh;
         transform: scale(0.25);
     }
@@ -290,7 +289,7 @@ body {
 
 @media screen and (max-device-width: 360px) and (max-device-height: 640px) {
     .first-page {
-        /* top: -179vh; */
+        top: -179vh;
         left: -122vh;
         -moz-transform: scale(0.24);
         /* Для Firefox */
